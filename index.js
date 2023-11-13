@@ -2,8 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv').config()
 const { info } = require('./controllers/info-controller')
 const app = express();
-const PORT = process.env.PORT;
-const url = process.env.SERVICE_URL;
+const PORT = 3002;
+const url =  'http://localhost:3000/home/v1/api/info';
 app.get('/',(req,res)=>{
     res.json({
         message : `server is Running on PORT : ${PORT}`
